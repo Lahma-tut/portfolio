@@ -166,3 +166,9 @@ p {
     text-transform: uppercase;
   }
 }
+
+@media (min-width: 610px) {
+  .card-item:nth-child(2) {
+    grid-column: span 2;
+  }
+}
