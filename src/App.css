@@ -1,0 +1,168 @@
+#root {
+  width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/*--- Header ---*/
+.header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 0 0 40px 0;
+}
+
+h2 {
+  max-width: 150px;
+  font-size: 1.4em;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #ebd7c5;
+  text-align: left;
+  cursor: pointer;
+  margin: 0;
+}
+
+/*--- Avatar ---*/
+.logo {
+  width: 90px;
+  height: 90px;
+  position: relative;
+
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar {
+  background-image: url(https://maxpryadkin.ru/wp-content/uploads/2023/07/IMG_0396-800-web332.jpg);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: morph 8s ease-in-out infinite 1s;
+  background-blend-mode: multiply;
+  -webkit-box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, .3);
+  -moz-box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, .3);
+  box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, .3);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/*--- Main ---*/
+h1 {
+  font-size: 5.2em;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #ebd7c5;
+  text-align: left;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1.4;
+  color: #ebd7c5;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-item {
+  color: #ebd7c5;
+  padding: 4em;
+  border: 1px solid #ebd7c5;
+  transition: box-shadow 0.25s;
+}
+
+.card-item:nth-child(2) {
+  grid-column: span 2;
+}
+
+.card-item:hover {
+  box-shadow: 6px 6px #ebd7c5;
+}
+
+.card-href {
+  display: flex;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.card-href a {
+  color: #ebd7c5;
+  font-weight: 300;
+  transition: all 0.25s ease-in;
+  padding: 12px 0;
+
+  transition: color .2s linear;
+  text-underline-offset: 5px;
+  -webkit-text-decoration: revert;
+  text-decoration: revert;
+  -webkit-text-decoration-color: #9d9d9d;
+  text-decoration-color: #9d9d9d;
+}
+
+.card-href a:hover {
+  -webkit-text-decoration-color: #6c6c6c;
+  text-decoration-color: #6c6c6c;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #ebd7c5;
+  margin: 0;
+}
+
+/*--- media ---*/
+@media (max-width: 610px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 2.7em;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #ebd7c5;
+    text-align: left;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+  }
+}
