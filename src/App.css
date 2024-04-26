@@ -107,10 +107,6 @@ h3 {
   transition: box-shadow 0.25s;
 }
 
-.card-item:nth-child(2) {
-  grid-column: span 2;
-}
-
 .card-item:hover {
   box-shadow: 6px 6px #ebd7c5;
 }
